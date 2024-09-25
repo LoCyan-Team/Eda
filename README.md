@@ -1,16 +1,11 @@
-# eda
+<h1 align="center">Eda</h1>
+<h3 align="center">Magic forward for LoCyanFrp minecraft proxy.</h3>
 
-A new Flutter project.
+## How it's works?
 
-## Getting Started
+Minecraft: Java Edition use a multicast address `224.0.2.60:4445` to discover intranet minecraft LAN games.
+Just proxy the proxy to local host and every 1.5s send a UDP multicast message to this address to make a "magic" forward.
 
-This project is a starting point for a Flutter application.
+## License
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This project is under [Apache License 2.0](LICENSE).
