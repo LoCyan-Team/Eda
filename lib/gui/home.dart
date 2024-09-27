@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:eda/api/code_info.dart';
 import 'package:eda/task.dart';
 import 'package:eda/utils/port_forward.dart';
@@ -91,8 +93,11 @@ class _HomeUIState extends State<HomeUI> {
                                 children: [
                                   TextButton(
                                     onPressed: () async {
+                                      ScaffoldMessenger.of(context)
+                                          .showSnackBar(const SnackBar(
+                                          content: Text('正在关闭内建服务，请稍候。')));
                                       tasker.endMulticast(item.task);
-                                      item.server.close();
+                                      await item.server.close();
                                       data.State.forwards.remove(item);
                                       ScaffoldMessenger.of(context)
                                           .showSnackBar(const SnackBar(
