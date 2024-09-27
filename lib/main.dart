@@ -1,14 +1,44 @@
 import 'package:eda/gui/home.dart';
 import 'package:flutter/material.dart';
+import 'package:window_manager/window_manager.dart';
 
 void main() async {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await windowManager.ensureInitialized();
+  WindowOptions windowOptions = const WindowOptions(
+    size: Size(800, 500),
+    minimumSize: Size(400, 400),
+    center: true,
+    skipTaskbar: false,
+  );
+  windowManager.waitUntilReadyToShow(windowOptions, () async {
+    await windowManager.show();
+    await windowManager.focus();
+  });
+
+  runApp(const App());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class App extends StatefulWidget {
+  const App({super.key});
 
-  // This widget is the root of your application.
+  @override
+  State createState() => _AppState();
+}
+
+class _AppState extends State<App> with WindowListener {
+  @override
+  void initState() {
+    super.initState();
+    windowManager.addListener(this);
+  }
+
+  @override
+  void dispose() {
+    windowManager.removeListener(this);
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -21,5 +51,11 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomeUI(),
       },
     );
+  }
+
+  @override
+  void onWindowFocus() {
+    // Make sure to call once.
+    setState(() {});
   }
 }
