@@ -111,16 +111,6 @@ jobs:
         with:
           name: "Linux Artifact(Dist)"
           path: dist/
-      - name: Download Build Artifact(MacOS arm64)
-        uses: actions/download-artifact@v4
-        with:
-          name: "MacOS Artifact(Dist arm64)"
-          path: dist/
-      - name: Download Build Artifact(MacOS x64)
-        uses: actions/download-artifact@v4
-        with:
-          name: "MacOS Artifact(Dist x64)"
-          path: dist/
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
