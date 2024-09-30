@@ -1,0 +1,9 @@
+app_id: 29833D49-8984-1B8E-C094-82EFF0F9DC05
+publisher: 夏沫花火zzz
+publisher_url: https://1l1.icu
+display_name: Eda
+create_desktop_icon: true
+install_dir_name: Eda
+script_template: inno_setup.iss
+locales:
+  - zh

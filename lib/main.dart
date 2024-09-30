@@ -42,7 +42,7 @@ class _AppState extends State<App> with WindowListener {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Eda',
+      title: 'Eda (Beta)',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,

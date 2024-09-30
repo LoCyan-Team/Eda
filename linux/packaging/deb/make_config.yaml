@@ -1,0 +1,28 @@
+display_name: Eda
+package_name: eda
+maintainer:
+  name: 夏沫花火zzz
+  email: ami@muska.zip
+co_authors:
+  - name: 夏沫花火zzz
+    email: ami@muska.zip
+priority: optional
+section: x11
+installed_size: 6604
+essential: false
+icon: icon.png
+
+postinstall_scripts: []
+postuninstall_scripts:
+  - 'rm -rf ~/.share/moe.muska.ami/eda'
+
+keywords:
+  - Eda
+  - LoCyanFrp
+
+generic_name: Eda
+
+categories:
+  - Network
+
+startup_notify: true

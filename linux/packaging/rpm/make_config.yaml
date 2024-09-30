@@ -1,0 +1,22 @@
+icon: icon.png
+summary: Eda
+group: Application/Network
+vendor: Muska_Ami
+packager: Muska_Ami
+packagerEmail: ami@muska.zip
+license: MIT
+url: https://github.com/LoCyan-Team/Eda
+build_arch: x86_64
+
+display_name: Eda
+
+keywords:
+  - Eda
+  - LoCyanFrp
+
+generic_name: Eda
+
+categories:
+  - Network
+
+startup_notify: true
