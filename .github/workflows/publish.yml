@@ -121,13 +121,8 @@ jobs:
           generate_release_notes: true
           token: ${{ secrets.RELEASE_GITHUB_TOKEN }}
           files: |
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}-windows-setup.exe
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}-windows.zip
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}-linux.deb
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}-linux.rpm
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}-linux.AppImage
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}+${{ env.VERSION }}-windows-setup.exe
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}+${{ env.VERSION }}-windows.zip
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}+${{ env.VERSION }}-linux.deb
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}+${{ env.VERSION }}-linux.rpm
-            ./dist/${{ env.VERSION }}/nyalcf-${{ env.VERSION }}+${{ env.VERSION }}-linux.AppImage
+            ./dist/${{ env.VERSION }}/eda-${{ env.VERSION }}-windows-setup.exe
+            ./dist/${{ env.VERSION }}/eda-${{ env.VERSION }}-windows.zip
+            ./dist/${{ env.VERSION }}/eda-${{ env.VERSION }}-linux.deb
+            ./dist/${{ env.VERSION }}/eda-${{ env.VERSION }}-linux.rpm
+            ./dist/${{ env.VERSION }}/eda-${{ env.VERSION }}-linux.AppImage
